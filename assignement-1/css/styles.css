@@ -319,3 +319,116 @@ nav a:hover {
 .about-text h3 {
     color: #b5e331;
 }
+
+/* Final invitation */
+
+.visit {
+    text-align: center;
+    background-color: #202027;
+    border-top: 3px solid #f20a58;
+    margin-bottom: 35px;
+    padding: 40px 20px;
+}
+
+.visit p {
+    margin-bottom: 25px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #202027;
+    border-top: 2px solid #b5e331;
+    padding: 25px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer strong {
+    color: #b5e331;
+}
+
+/* Medium screen layout */
+
+@media screen and (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Place the introduction and logo beside each other */
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "intro logo";
+    }
+
+    .gaming-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gaming-grid article:nth-child(3) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Membership spans both columns in the second row */
+    .membership {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "heading story";
+    }
+}
+
+/* Large screen layout */
+
+@media screen and (min-width: 1024px) {
+    /* Give the introduction a wider track and the logo a narrower track */
+    .hero {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .gaming-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    
+    .gaming-grid article:nth-child(3) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    /*a wider pricing track */
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr 1.5fr;
+    }
+
+    .membership {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .hero h2 {
+        font-size: 54px;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+}
